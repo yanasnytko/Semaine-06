@@ -1,16 +1,23 @@
 <!-- omit in toc -->
 # Méthodologie de nommage
 
-- [BEM (Block Element Modifier) : B__E — M](#bem-block-element-modifier--b__e--m)
-  - [Comment qu'on écrit avec BEM](#comment-quon-écrit-avec-bem)
-  - [Convention de nommage BEM](#convention-de-nommage-bem)
-  - [Avantages et Inconvénients](#avantages-et-inconvénients)
-- [ABEM (Atomic Block Element Modifier) : A-B__E -M](#abem-atomic-block-element-modifier--a-b__e--m)
-  - [Convention de nommage ABEM](#convention-de-nommage-abem)
-    - [Gestion de la case](#gestion-de-la-case)
-    - [Atomic Design](#atomic-design)
-    - [Gestion des modifiers](#gestion-des-modifiers)
-- [Conclusion](#conclusion)
+Il existe bon nombres de méthodologie de nommage, elles existent pour simplifier la tâche des développeurs et leurs permettent de s'y retrouver dans le nom de leurs classes. Cela rend également plus facile la collaboration dans une équipe, car tout le monde s'applique à respecter la méthode choisie et ainsi tout est plus claire pour l'ensemble des personnes travaillant sur le code.
+
+Nous allons voir "2 méthodes" connues qui sont BEM et ABEM. Alors c'est partit!
+
+# Table des matières
+- [Table des matières](#table-des-matières)
+  - [BEM (Block Element Modifier) : B__E — M](#bem-block-element-modifier--b__e--m)
+    - [Comment qu'on écrit avec BEM](#comment-quon-écrit-avec-bem)
+    - [Convention de nommage BEM](#convention-de-nommage-bem)
+    - [Avantages et Inconvénients](#avantages-et-inconvénients)
+  - [ABEM (Atomic Block Element Modifier) : A-B__E -M](#abem-atomic-block-element-modifier--a-b__e--m)
+    - [Convention de nommage ABEM](#convention-de-nommage-abem)
+      - [Gestion de la case](#gestion-de-la-case)
+      - [Atomic Design](#atomic-design)
+      - [Gestion des modifiers](#gestion-des-modifiers)
+  - [Conclusion](#conclusion)
+  - [Crédits](#crédits)
 
 ## BEM (Block Element Modifier) : B__E — M
 
@@ -142,24 +149,26 @@ Il reste un dernier soucis à réglé avec BEM. On a vu que les classes peuvent 
 
 Au lieu d'écrire:
 
-```css
+```html
 // BEM
-.a-card__img--important{
-  border: red solid 1px;
-}
+<img class="a-card__img--important">
 ```
 
 On va écrire: 
-```css
-// BEM
-.a-card__img -important{
-  border: red solid 1px;
-}
+```html
+// ABEM
+<img class="a-card__img -important">
 ```
 
-Cela permet de sortir la classe `-important`et de pouvoir la réutiliser sans devoir à chaque fois réécrire le nom de tout notre composant.
+Cela permet de sortir la classe `-important`et de pouvoir la réutiliser sans devoir à chaque fois réécrire le nom de tout notre composant. Ainsi le modifier n'est plus spécifique. Mais si besoin on peut sans problème ré-attacher le modifier.
 
 ## Conclusion
 
 Il existe d'autre méthode de nommage comme [OOCSS](http://oocss.org/) (Object-Oriented CSS), [SUIT CSS](https://suitcss.github.io/), ou encore [SMACSS](https://smacss.com/) (Scalable and Modular Architecture for CSS), entre autres… Il n'est pas nécessaire d'en employer une constamment, mais dès lors que vous travailler sur un projet un peu plus conséquent et lorsqu'on aura vu les pré-processeur CSS (comme SASS) ces méthodes deviendront un véritable atout. Il est aussi possible que lorsque vous travaillerez dans une boîte ils utilisent l'une ou l'autre méthode.
 Ici il s'agissait de vous introduire au concept. A vous de vous renseigner sur les autres méthodes si vous le souhaitez et à choisir votre préféré.
+
+## Crédits
+
+Théorie réalisé sur base de l'article suivant: [Les méthodologies BEM & ABEM en CSS](https://medium.com/slickteam/les-m%C3%A9thodologies-bem-abem-en-css-58f821c5194e)
+
+Images provenant de [ABEM. A more useful adaptation of BEM.](https://css-tricks.com/abem-useful-adaptation-bem/)
