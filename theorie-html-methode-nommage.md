@@ -7,6 +7,10 @@
   - [Avantages et Inconvénients](#avantages-et-inconvénients)
 - [ABEM (Atomic Block Element Modifier) : A-B__E -M](#abem-atomic-block-element-modifier--a-b__e--m)
   - [Convention de nommage ABEM](#convention-de-nommage-abem)
+    - [Gestion de la case](#gestion-de-la-case)
+    - [Atomic Design](#atomic-design)
+    - [Gestion des modifiers](#gestion-des-modifiers)
+- [Conclusion](#conclusion)
 
 ## BEM (Block Element Modifier) : B__E — M
 
@@ -74,7 +78,7 @@ Cette méthode permet d'avoir des classes clair et précise et de s'y retrouver 
 
 ## ABEM (Atomic Block Element Modifier) : A-B__E -M
 
-ABEM est une **A**mélioration de BEM, avec une notion **A**tomic Design. Mais qu'est-ce que c'est que l'atomic design me direz-vous ? Il s'agit de distinguer 5 types de composants: atoms, molecules, organism, template et pages. Les deux derniers ne nous intéresseront pas dans cette méthode.
+ABEM est une **A**mélioration de BEM, avec une notion d'**A**tomic Design. Mais qu'est-ce que c'est que l'atomic design me direz-vous ? Il s'agit de distinguer 5 types de composants: atoms, molecules, organism, template et pages. Les deux derniers ne nous intéresseront pas dans cette méthode.
 
 - Atom: c'est un composant très simple qui n'est généralement qu'un seul élément comme un bouton ou un lien.
 - Molecule: c'est un petit groupe d'éléments qui fonctionnent ensemble. Par exemple, un champ de formulaire et son label.
@@ -84,7 +88,10 @@ ABEM est une **A**mélioration de BEM, avec une notion **A**tomic Design. Mais q
 
 ### Convention de nommage ABEM
 
+#### Gestion de la case
 On nomme nos classes un peu près comme avec BEM mais à avec la différence suivante: le `camelCase`. Exemple: `blockName`.
+
+L'utilité de changer de case vient de la possibilité de mieux distinguer les enfants d'autres éléments.
 
 ```
 // BEM
@@ -96,4 +103,63 @@ blockName__elementName-grandchild
 blockName__elementName_grandchild
 ```
 
+Le fait de ne plus utiliser de tiret dans le nom des éléments permet de ne pas se tromper et de lire plus rapidement la classe.
 
+#### Atomic Design
+
+Ajoutons maintenant notre notion d'Atomic Design. On va placer un préfixe pour signaler de quel type d'élément il s'agit. 
+
+`a/m/o pour atom/molecule/organism`
+
+```css
+// BEM
+.m-subscribe-form__field-item {}
+// ABEM
+.m-subscribeForm__fieldItem {}
+```
+
+Dans l'exemple BEM ci-dessus, on ne distingue pas bien si le `m-`fait partie du nom du block ou si il représente l'atomicité. Grâce au `camelCase` utilisé dans l'ABEM, on sait d'office qu'il ne peut pas faire partie du nom du block.
+
+Voici un exemple supplémentaire pour vous convaincre. Regardez les deux silhouette suivante et essayer de déterminer quelle partie est quoi exactement.
+
+![bem-silhouette](images/bem_silhouette.png)
+Silhouette BEM classique + atomic design
+
+![abem-silhouette](images/abem_silhouette.png)
+Silhouette ABEM classique + atomic design
+
+Dans la première silhouette on ne sait pas dire qui est quoi, tandis que dans la deuxième grâce au "camel case" on comprend immédiatement chaque séparation (tiret et underscore). Ces deux silhouette sont pourtant exactement le même élément:
+
+![bem-silhouette2](images/bem_silhouette2.png)
+Silhouette BEM classique + atomic design
+
+![abem-silhouette2](images/abem_silhouette2.png)
+Silhouette ABEM classique + atomic design
+
+#### Gestion des modifiers
+
+Il reste un dernier soucis à réglé avec BEM. On a vu que les classes peuvent vite devenir longue avec les modifier. On va tout simplement séparer les modifier.
+
+Au lieu d'écrire:
+
+```css
+// BEM
+.a-card__img--important{
+  border: red solid 1px;
+}
+```
+
+On va écrire: 
+```css
+// BEM
+.a-card__img -important{
+  border: red solid 1px;
+}
+```
+
+Cela permet de sortir la classe `-important`et de pouvoir la réutiliser sans devoir à chaque fois réécrire le nom de tout notre composant.
+
+## Conclusion
+
+Il existe d'autre méthode de nommage comme [OOCSS](http://oocss.org/) (Object-Oriented CSS), [SUIT CSS](https://suitcss.github.io/), ou encore [SMACSS](https://smacss.com/) (Scalable and Modular Architecture for CSS), entre autres… Il n'est pas nécessaire d'en employer une constamment, mais dès lors que vous travailler sur un projet un peu plus conséquent et lorsqu'on aura vu les pré-processeur CSS (comme SASS) ces méthodes deviendront un véritable atout. Il est aussi possible que lorsque vous travaillerez dans une boîte ils utilisent l'une ou l'autre méthode.
+Ici il s'agissait de vous introduire au concept. A vous de vous renseigner sur les autres méthodes si vous le souhaitez et à choisir votre préféré.
