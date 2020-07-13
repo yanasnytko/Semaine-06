@@ -38,3 +38,9 @@ Placez le script suivant dans une page `script.js` et liez la page avec vos page
       return div.innerHTML;
     }
   ```
+
+Modifier votre balise `<body>`pour lancer la fonction au démarrage de la page
+
+```html
+<body onLoad='encodePreElements()'>
+```
