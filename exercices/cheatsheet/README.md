@@ -20,7 +20,7 @@ Bon travail!!
 
 Évidement si vous tenter de placer des balises HTML dans votre page, ceux-ci vont être rendu par votre navigateur. Il faudra donc ruser et utiliser soit des `<textarea>` pour afficher le code ou alors vous pouvez utiliser le petit script suivant pour encapsuler vos tags dans la balise `<pre>`.
 
-Placez le script suivant dans une balise `<script>`dans votre balise `<head>`
+Placez le script suivant dans une page `script.js` et liez la page avec vos pages HTML.
 
 ```js
     function encodePreElements() {
@@ -37,10 +37,4 @@ Placez le script suivant dans une balise `<script>`dans votre balise `<head>`
       div.appendChild(text);
       return div.innerHTML;
     }
-  ```
-
-Modifiez votre balise `<body>`pour que la fonction `encodePreElements`se lance immédiatement au chargement de votre page.
-
-  ```html
-  <body onLoad='encodePreElements()'>
   ```

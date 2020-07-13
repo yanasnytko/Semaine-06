@@ -4,20 +4,19 @@
 Il existe bon nombres de méthodologie de nommage, elles existent pour simplifier la tâche des développeurs et leurs permettent de s'y retrouver dans le nom de leurs classes. Cela rend également plus facile la collaboration dans une équipe, car tout le monde s'applique à respecter la méthode choisie et ainsi tout est plus claire pour l'ensemble des personnes travaillant sur le code.
 
 Nous allons voir "2 méthodes" connues qui sont BEM et ABEM. Alors c'est partit!
-
+<!-- omit in toc -->
 # Table des matières
-- [Table des matières](#table-des-matières)
-  - [BEM (Block Element Modifier) : B__E — M](#bem-block-element-modifier--b__e--m)
-    - [Comment qu'on écrit avec BEM](#comment-quon-écrit-avec-bem)
-    - [Convention de nommage BEM](#convention-de-nommage-bem)
-    - [Avantages et Inconvénients](#avantages-et-inconvénients)
-  - [ABEM (Atomic Block Element Modifier) : A-B__E -M](#abem-atomic-block-element-modifier--a-b__e--m)
-    - [Convention de nommage ABEM](#convention-de-nommage-abem)
-      - [Gestion de la case](#gestion-de-la-case)
-      - [Atomic Design](#atomic-design)
-      - [Gestion des modifiers](#gestion-des-modifiers)
-  - [Conclusion](#conclusion)
-  - [Crédits](#crédits)
+- [BEM (Block Element Modifier) : B__E — M](#bem-block-element-modifier--b__e--m)
+  - [Comment qu'on écrit avec BEM](#comment-quon-écrit-avec-bem)
+  - [Convention de nommage BEM](#convention-de-nommage-bem)
+  - [Avantages et Inconvénients](#avantages-et-inconvénients)
+- [ABEM (Atomic Block Element Modifier) : A-B__E -M](#abem-atomic-block-element-modifier--a-b__e--m)
+  - [Convention de nommage ABEM](#convention-de-nommage-abem)
+    - [Gestion de la case](#gestion-de-la-case)
+    - [Atomic Design](#atomic-design)
+    - [Gestion des modifiers](#gestion-des-modifiers)
+- [Conclusion](#conclusion)
+- [Crédits](#crédits)
 
 ## BEM (Block Element Modifier) : B__E — M
 
