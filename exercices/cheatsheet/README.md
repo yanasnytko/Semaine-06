@@ -18,29 +18,76 @@ Bon travail!!
 
 ## Afficher des tag HTML dans une page HTML
 
-Évidement si vous tenter de placer des balises HTML dans votre page, ceux-ci vont être rendu par votre navigateur. Il faudra donc ruser et utiliser soit des `<textarea>` pour afficher le code ou alors vous pouvez utiliser le petit script suivant pour encapsuler vos tags dans la balise `<pre>`.
+Évidement si vous tenter de placer des balises HTML dans votre page, ceux-ci vont être rendu par votre navigateur. Il faudra donc ruser pour afficher le code. Voici plusieurs solutions:
+
+### Textarea
+
+Il est possible d'utiliser un champ `textarea`pour y coller votre code. Ainsi, ce dernier s'affichera sans être rendu par le navigateur. Vous pouvez ensuite cibler votre `textarea`dans votre feuille de style css pour lui donner un style un peu plus sympa que celui par défaut.
+
+```html
+<textarea row="5" cols="55">
+  <html>
+    <head>
+    </head>
+    <body>
+    </body>
+  </html>
+</textarea>
+```
+
+### Votre balise HTML
+
+Une solution serait de créer une balise HTML propre à vous et avec les pseudo-sélecteurs d'ajouter les `<>`. C'est un peu plus modulable mais demandera une certaine rigueur pour ne pas oublier de mettre votre propre balise devant juste le nom de la balise que vous voulez afficher.
+
+```html
+<kode>div</kode>
+```
+
+```css
+kode:before{
+  content:"<"
+}
+kode:after{
+  content:">"
+}
+```
+
+### Script JS
 
 Placez le script suivant dans une page `script.js` et liez la page avec vos pages HTML.
 
-```js
-    function encodePreElements() {
-    var pre = document.getElementsByTagName('pre');
-    for(var i = 0; i < pre.length; i++) {
-        var encoded = htmlEncode(pre[i].innerHTML);
-        pre[i].innerHTML = encoded;
-    }
-    };
+```javascript
+ var parserRules = [
+        { pattern: /</g, replacement: '&lt;' },
+        { pattern: />/g, replacement: '&gt;' },
+        { pattern: /<html>/g, replacement: 'html&#8232' },
+      ];
 
-    function htmlEncode(value) {
-      var div = document.createElement('div');
-      var text = document.createTextNode(value);
-      div.appendChild(text);
-      return div.innerHTML;
-    }
+      document.querySelectorAll('.code').forEach(function(tag) {
+        var inner = tag.innerHTML;
+        parserRules.forEach(function(rule) {
+          inner = inner.replace(rule.pattern, rule.replacement)
+        });
+        tag.innerHTML = inner;
+      });
   ```
 
-Modifier votre balise `<body>`pour lancer la fonction au démarrage de la page
+Ce bout de script va remplacer vos chevrons (`<>`) par leurs unicode html `&lt;` et `&gt;`. Cela devrait afficher vos balises comprise à l'intérieur de la classe `.code`. Petit soucis c'est que vos balises `html`et `head`et `body`ne s'afficheront pas malgré tout. La solution est juste en dessous.
 
 ```html
-<body onLoad='encodePreElements()'>
+<div class="code"> <!-- s'affichera PAS -->
+  <div> <!-- s'affichera -->
+    <p> <!-- s'affichera -->
+      <img> <!-- s'affichera -->
+    </p> <!-- s'affichera -->
+  </div> <!-- s'affichera -->
+</div> <!-- s'affichera PAS -->
+```
+
+### Séparateur
+
+Vous pouvez utiliser un `line separator` en insérant ce bout de code `&#8232` devant le nom de vos balises.
+
+```html
+<&#8232html>
 ```
