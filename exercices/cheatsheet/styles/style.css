@@ -51,6 +51,7 @@ header a {
 .-hover:hover {
   transform: scale(1.2);
   transition: 1s;
+  border: none;
 }
 .-html:hover {
   color: #F1672D;
@@ -95,16 +96,20 @@ h2.-title {
   .-code, pre {
     padding-left: 3%;
     border-left: var(--light) 3px solid;
+    margin-bottom: 1vh;
+    margin-top: 0;
   }
   .m-cheat__explication {
     display: flex;
     text-align: justify;
     align-items: flex-end;
     justify-content: space-between;
+    padding-bottom: 1vh;
   }
   .-tag {
     font-weight: 600;
     color: var(--light);
+    display: inline;
   }
   .-property {
     color: var(--dark);
@@ -118,4 +123,5 @@ h2.-title {
     padding: 1vh 5%;
     border-radius: 10px;
     height: 4vh;
+    outline: none;
   }

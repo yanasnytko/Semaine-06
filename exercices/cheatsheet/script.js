@@ -11,3 +11,8 @@ document.querySelectorAll('.-code').forEach(function (tag) {
   });
   tag.innerHTML = inner;
 });
+
+// HTML 6
+document.getElementById("html6").addEventListener("click", () => {
+  window.alert("Je suis un texte visible");
+});

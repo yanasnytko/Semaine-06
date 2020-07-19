@@ -31,7 +31,160 @@
     <h1 class="-title">
       Cheat Sheet de HTML
     </h1>
+    <!-- 1 -->
     <div class="o-cheat">
+      <h2 class="-title">
+        HyperText Markup Language
+      </h2>
+      <div class="-code">
+        &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, <h1> </h1>, <p> </p>, ...
+      </div>
+      <p class="m-cheat__explication">
+        Il s'agit d'un "langage de balisage", du squelette de la page web, qui utilise des balises (voir plus haut).
+        Elles indiquent l'endroit de la page où votre contenu doit être inséré, comme un coup de marqueur sur une carte.
+      </p>
+    </div>
+    <!-- 2 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Le squelette d'une page HTML
+      </h2>
+      <pre class="-code">&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    <meta charset="UTF-8">
+    <title> Je suis le titre </title>
+  &lt;/head&gt;
+  &lt;body&gt;
+    <p> Je suis le contenu de la page.</p>
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <p class="m-cheat__explication">
+        Le nom de la balise se met entre <>, ce nom est définit dans les spécifications HTML, on ne met pas ce que l'on
+          veut.
+      </p>
+    </div>
+    <!-- 3 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Bases
+      </h2>
+      <div class="-code">
+        &lt;!doctype html&gt;
+      </div>
+      <p class="m-cheat__explication">
+        Obligatoire, indique au navigateur quel version d'HTML on utilise sur cette page.
+      </p>
+      <div class="-code">
+        &lt;html lang="fr"&gt;
+      </div>
+      <p class="m-cheat__explication">
+        C'est elle qui ouvre et ferme tout le code. Il est obligatoire d'ajouter les balises &lt;head&gt; et
+        &lt;body&gt; entre les balises &lt;html&gt;.
+      </p>
+    </div>
+    <!-- 4 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        La balise &lt;head&gt;
+      </h2>
+      <p class="m-cheat__explication">
+        Elle détermine l'entête du document et contient les méta-informations.
+      </p>
+      <div class="-code">
+        <title>Le titre de ma page HTML</title>
+      </div>
+      <p class="m-cheat__explication">
+        Permet de donner un titre à la page.
+      </p>
+      <div class="-code">
+        <meta charset="UTF-8">
+      </div>
+      <p class="m-cheat__explication">
+        Elle sert notamment à définir quel set de caractères la page utilise, le nom de l'auteur de la page, des
+        mots-clés, une description, ...
+      </p>
+      <div class="-code">
+        <link rel="stylesheet" href="style.css">
+      </div>
+      <p class="m-cheat__explication">
+        Permet de lier notre page de style à la page html.
+      </p>
+    </div>
+    <!-- 5 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        La balise &lt;body&gt;
+      </h2>
+      <p class="m-cheat__explication">
+        C'est elle qui contient le contenu de la page. On y met toutes les balises de textes, d'images, de liens, ...
+      </p>
+      <div class="-code">
+        <img src="mon lien">
+      </div>
+      <p class="m-cheat__explication">
+        Certaines balises peuvent se voir attribuer des attributs. Ils permettent de préciser certains paramètres.
+      </p>
+    </div>
+    <!-- 6 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Les commentaires
+      </h2>
+      <div class="-code">
+        <p> Je suis un texte visible &lt;!-- je suis un commentaire invisible --&gt; </p>
+      </div>
+      <p class="m-cheat__explication">
+        Les commentaires dans le code sont une bonne pratique à avoir. Ils permettent de donner des informations
+        complémentaires à ceux qui retravaillerons dans votre code.
+        <button class="-hover" id="html6">Exemple</button>
+      </p>
+    </div>
+    <!-- 7 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Balise sémantiques
+      </h2>
+      <div class="-code">
+        article, aside, details, figcaption, figure, footer, header, main, mark, nav, section, summary, time
+      </div>
+      <p class="m-cheat__explication">
+        Le but de ces balises est de donner au navigateur et au développeur une description du contenu qui suit.
+      </p>
+    </div>
+    <!-- 8 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        La balise &lt;div&gt;
+      </h2>
+      <p class="m-cheat__explication">
+        La division est un conteneur. Cette balise permet de structurer sa page en "bloc".
+      </p>
+    </div>
+    <!-- 9 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        La balise &lt;p&gt;
+      </h2>
+      <p class="m-cheat__explication">
+        P pour paragraphe, c'est la balise la plus courante pour rédiger du texte. C'est un bloc qui est suivis d'un
+        saut à la ligne. On peut mettre la balise &lt;p&gt; dans un &lt;div&gt; mais jamais de &lt;p&gt; dans un autre.
+      </p>
+    </div>
+    <!-- 10 -->
+
+    <!-- 11 -->
+
+    <!-- 12 -->
+
+    <!-- 13 -->
+
+    <!-- 14 -->
+
+    <!-- 15 -->
+
+    <!--<div class="o-cheat">
       <h2 class="-title">
         Sections
       </h2>
@@ -48,61 +201,7 @@
         Explication
         <button class="-hover">Exemple</button>
       </p>
-    </div>
-    <div class="o-cheat">
-      <h2 class="-title">
-        Sections
-      </h2>
-      <div class="-code">
-        &lt;html&gt; <i></i>
-      </div>
-
-      <pre>
-<span class="-tag">html</span> {
-  <span class="-property">color:</span> blue;
-}     </pre>
-
-      <p class="m-cheat__explication">
-        Explication
-        <button class="-hover">Exemple</button>
-      </p>
-    </div>
-    <div class="o-cheat">
-      <h2 class="-title">
-        Sections
-      </h2>
-      <div class="-code">
-        &lt;html&gt; <i></i>
-      </div>
-
-      <pre>
-<span class="-tag">html</span> {
-  <span class="-property">color:</span> blue;
-}     </pre>
-
-      <p class="m-cheat__explication">
-        Explication
-        <button class="-hover">Exemple</button>
-      </p>
-    </div>
-    <div class="o-cheat">
-      <h2 class="-title">
-        Sections
-      </h2>
-      <div class="-code">
-        &lt;html&gt; <i></i>
-      </div>
-
-      <pre>
-<span class="-tag">html</span> {
-  <span class="-property">color:</span> blue;
-}     </pre>
-
-      <p class="m-cheat__explication">
-        Explication
-        <button class="-hover">Exemple</button>
-      </p>
-    </div>
+    </div>-->
   </main>
 
   <footer>
