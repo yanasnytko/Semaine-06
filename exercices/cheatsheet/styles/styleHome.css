@@ -12,7 +12,7 @@ nav {
   justify-content: space-around;
   font-size: 1.4em;
 }
-a {
+nav a {
   color: var(--black);
   font-family: 'Mulish', sans-serif;
   font-weight: 600;
@@ -25,7 +25,7 @@ img {
   width: 200px;
   padding-bottom: 3vh;
 }
-a:hover {
+nav a:hover {
   transform: scale(1.2);
   transition: 1s;
 }

@@ -72,6 +72,11 @@ footer {
 footer p {
   padding: 0 3%;
 }
+footer a {
+  color: var(--white);
+  text-transform: none;
+  text-decoration: underline;
+}
 
 /* Cheats */
 main {
@@ -97,7 +102,8 @@ h2.-title {
     padding-left: 3%;
     border-left: var(--light) 3px solid;
     margin-bottom: 1vh;
-    margin-top: 0;
+    margin-top: 2vh;
+    font-family: 'Open Sans', sans-serif;
   }
   .m-cheat__explication {
     display: flex;

@@ -31,7 +31,120 @@
     <h1 class="-title">
       Cheat Sheet de JavaScript
     </h1>
+    <!-- 1 -->
     <div class="o-cheat">
+      <h2 class="-title">
+        Les variables
+      </h2>
+      <pre>
+<span class="-tag">const</span> <span class="-property">firstname</span> = "Yana";</pre>
+      <p class="m-cheat__explication">
+        const (pour constante) détermine la portée de la variable, en l'occurence elle ne peut être réassignée à une
+        nouvelle valeur car c'est une valeur constante.
+      </p>
+      <pre>
+<span class="-tag">let</span> <span class="-property">student</span> = "Yana";</pre>
+      <p class="m-cheat__explication">
+        let défini une variable dont la valeur est réassignable.
+      </p>
+    </div>
+    <!-- 2 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Chaine de caractères
+      </h2>
+      <pre>
+<span class="-tag">const</span> <span class="-property">firstname</span> = "Yana";
+<span class="-tag">let</span> <span class="-property">age</span> = "23 ans";</pre>
+
+      <p class="m-cheat__explication">
+        Une chaîne de caractère représente un texte, elle peut contenir l'ensemble des caractères reconnu du
+        clavier dont des chiffres. Les chiffres seront ici interprêté sous forme de caractère et ne pourront pas être
+        utilisé comme une variable typée nombre. <br>
+        Elle est attribuée grâce au signe = déclarée chaîne de caractère grâce aux guillemets " ", et pour terminé,
+        comme à chaque fin de déclaration le ; qui indique au navigateur de passer à la ligne suivante.
+      </p>
+    </div>
+    <!-- 3 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Nombres
+      </h2>
+      <pre>
+<span class="-tag">let</span> <span class="-property">firstNumber</span> = 1;
+<span class="-tag">let</span> <span class="-property">secondNumber </span> = 2;</pre>
+      <p class="m-cheat__explication">
+        Pour indiquer à ma variable qu'il s'agissait d'un chiffre, il suffit tout simplement d'écrire les nombres
+        dépourvu de guillemets. Lorsque la variable est typée "number" on peut réaliser des opérations mathématiques et
+        obtenir un résultat cohérent. <br>
+        Si la variable chaîne de caractères contenant des nombres on ne peut pas réaliser d'opérations en dehors de la
+        concaténation.
+      </p>
+    </div>
+    <!-- 4 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Booléens
+      </h2>
+      <pre>
+<span class="-tag">let</span> <span class="-property">isConnected</span> = New Boolean([valeur]);</pre>
+
+      <p class="m-cheat__explication">
+        New représente l'instruction, Boolean l'objet devant être créé, on constate la présence du constructeur () il
+        indique que l'objet devant être créé doit recevoir un paramètre pour être construit en l'occurence [valeur],
+        cette valeur peut recevoir true ou false qui sont des valeurs booléennes. <br>
+        Un booléen ne reçoit que ces deux valeurs "vrai" ou "faux". Elle permet de performer des actions spécifique en
+        vérifiant si l'état de cette variable est définie sur true, ou sur false.
+      </p>
+    </div>
+    <!-- 5 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Tableaux (Arrays)
+      </h2>
+      <pre>
+<span class="-tag">let</span> <span class="-property">studentArray</span> = New Array;
+<span class="-tag">let</span> <span class="-property">studentArray</span> = [];
+<span class="-tag">let</span> <span class="-property">studentArray</span> = ["Il", "Elle", "On"];</pre>
+      <p class="m-cheat__explication">
+        Un tableau peut contenir plusieurs informations. De ce fait pour chaque information contenue dans un tableau, il
+        lui est attribué un indice. Le premier élément d'un tableau est attribué à l'indice 0, le second à l'indice 1,
+        le troisième à l'indice 2, etc. <br>
+        Pour définir le type tableau il faut indiquer à javascript que vous souhaiter créer un nouveau tableau, il
+        existe plusieurs façon de le faire (voir ci-dessus).
+      </p>
+    </div>
+    <!-- 6 -->
+    <div class="o-cheat">
+      <h2 class="-title">
+        Objets
+      </h2>
+      <pre>
+<span class="-tag">const</span> <span class="-property">chat</span> = {
+    nom: "Busya",
+    age: 12,
+    race: "Scottish"
+};</pre>
+      <p class="m-cheat__explication">
+        Les objets possèdent des propriétés et des valeurs correspondantes, on peut les comparer aux objets de la vrai
+        vie. <br>
+        Pour accéder aux valeurs des propriétés des objets vous pouvez simplement procéder de cette façon ->
+        console.log(chat.nom); la console imprimera "Busya".
+      </p>
+    </div>
+    <!-- 7 -->
+
+    <!-- 8 -->
+
+    <!-- 9 -->
+
+    <!-- 10 -->
+
+    <!-- 11 -->
+
+    <!-- 12 -->
+
+    <!--<div class="o-cheat">
       <h2 class="-title">
         Sections
       </h2>
@@ -48,65 +161,11 @@
         Explication
         <button class="-hover">Exemple</button>
       </p>
-    </div>
-    <div class="o-cheat">
-      <h2 class="-title">
-        Sections
-      </h2>
-      <div class="-code">
-        &lt;html&gt; <i></i>
-      </div>
-
-      <pre>
-<span class="-tag">html</span> {
-  <span class="-property">color:</span> blue;
-}     </pre>
-
-      <p class="m-cheat__explication">
-        Explication
-        <button class="-hover">Exemple</button>
-      </p>
-    </div>
-    <div class="o-cheat">
-      <h2 class="-title">
-        Sections
-      </h2>
-      <div class="-code">
-        &lt;html&gt; <i></i>
-      </div>
-
-      <pre>
-<span class="-tag">html</span> {
-  <span class="-property">color:</span> blue;
-}     </pre>
-
-      <p class="m-cheat__explication">
-        Explication
-        <button class="-hover">Exemple</button>
-      </p>
-    </div>
-    <div class="o-cheat">
-      <h2 class="-title">
-        Sections
-      </h2>
-      <div class="-code">
-        &lt;html&gt; <i></i>
-      </div>
-
-      <pre>
-<span class="-tag">html</span> {
-  <span class="-property">color:</span> blue;
-}     </pre>
-
-      <p class="m-cheat__explication">
-        Explication
-        <button class="-hover">Exemple</button>
-      </p>
-    </div>
+    </div>-->
   </main>
 
   <footer>
-    <p>Cheat Sheets by Yana Snyko - Sirius 2020</p>
+    <p><a href="../index.html" title="Aller à la page d'accueil">Cheat Sheets</a> by Yana Snyko - Sirius 2020</p>
   </footer>
 </body>
 <script src="../script.js"></script>
