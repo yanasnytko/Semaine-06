@@ -60,7 +60,6 @@ Placez le script suivant dans une page `script.js` et liez la page avec vos page
  var parserRules = [
         { pattern: /</g, replacement: '&lt;' },
         { pattern: />/g, replacement: '&gt;' },
-        { pattern: /<html>/g, replacement: 'html&#8232' },
       ];
 
       document.querySelectorAll('.code').forEach(function(tag) {
